@@ -4,7 +4,7 @@ from telegram.ext import (
     ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 )
 
-ADMIN_IDS = [123456789]  # استبدل هذا بالـ user_id الخاص بك
+ADMIN_IDS = [1195052497]
 
 data = {
     "Surgery": [f"Chapter {i+1}" for i in range(20)],
@@ -47,7 +47,7 @@ async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text("⚙️ إعدادات البوت (تجريبي)")
 
 if __name__ == '__main__':
-    TOKEN = os.environ.get("API_TOKEN", "PUT-YOUR-TOKEN-HERE")
+    TOKEN = os.environ.get("API_TOKEN", "8089864249:AAFitTjy7KMKGXBFaunnuc-_so67-vLKgxo")
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_buttons))
